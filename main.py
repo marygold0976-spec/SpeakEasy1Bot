@@ -9,9 +9,10 @@ from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import Application, CommandHandler, MessageHandler, CallbackQueryHandler, ContextTypes, filters
 
 # ==================== CONFIGURATION ====================
-BOT_TOKEN = os.environ.get("TELEGRAM_TOKEN")
+# Try both possible environment variable names
+BOT_TOKEN = os.environ.get("BOT_TOKEN") or os.environ.get("TELEGRAM_TOKEN")
 if not BOT_TOKEN:
-    raise ValueError("TELEGRAM_TOKEN environment variable not set!")
+    raise ValueError("BOT_TOKEN or TELEGRAM_TOKEN environment variable not set!")
 
 # Multiple translation APIs for reliability
 TRANSLATION_APIS = [
