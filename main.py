@@ -15,7 +15,7 @@ TRANSLATION_APIS = [
     {"url": "https://translate.argosopentech.com/translate", "name": "Argos Translate"}
 ]
 
-# Supported languages
+# Supported languages (40+ languages)
 LANGUAGES = {
     "en": "English", "es": "Spanish", "fr": "French", "de": "German",
     "it": "Italian", "pt": "Portuguese", "ru": "Russian", "ja": "Japanese",
